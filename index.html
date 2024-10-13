@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JS Wizard Form</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>The Wizard Form</h1>
+            <p>
+                Step <span id="currentStep">1</span>
+            </p>
+            <form id="wizard-form">
+                <div id="step1" class="step active">
+                    <div class="form-group">
+                        <label for="email"> Email Address </label>
+                        <input class="form-control" name="email" type="text" placeholder="Please Enter Email Address" />
+                    </div>
+                    <button type="button" class="btn btn-primary f-right" onclick="nextStep()">Next</button>
+                </div>
+                <div id="step2" class="step">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input class="form-control" name="username" type="text" placeholder="Enter Username" />
+                    </div>
+                    <button type="button" class="btn btn-secondary" onclick="prevStep()"> Previous</button>
+                    <button type="button" class="btn btn-primary f-right" onclick="nextStep()">Next</button>
+                </div>
+                <div id="step3" class="step">
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input class="form-control" name="password" type="text" placeholder="Enter Password" />
+                        <button type="button" class="btn btn-secondary" onclick="prevStep()"> Previous</button>
+                        <button type="submit" class="btn btn-submit f-right"> Submit</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </body>
+</html>
